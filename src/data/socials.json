@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Discord",
+    "icon": "discord",
+    "url": "https://discord.gg/VFMDQcqeBu"
+  },
+  {
+    "name": "Instagram",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/stand_ups_robotique/"
+  },
+  {
+    "name": "LinkedIn",
+    "icon": "linkedin",
+    "url": "https://www.linkedin.com/company/stand-ups/about/"
+  },
+  {
+    "name": "Mail",
+    "icon": "gmail",
+    "url": "mailto://standupsrobotique@gmail.com"
+  }
+]

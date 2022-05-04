@@ -9,7 +9,7 @@ import "./assets/tailwind.css";
 
 const app = createApp(App);
 app.component(VueFeather.name, VueFeather);
-app.use(router);
+//app.use(router);
 app.use(createPinia());
 
 app.mount("#app");
