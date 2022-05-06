@@ -11,6 +11,7 @@
   "dependencies": {
     "feather-icons": "^4.28.0",
     "pinia": "^2.0.11",
+    "simple-icons": "^6.20.0",
     "url": "^0.11.0",
     "vue": "^3.2.25",
     "vue-feather": "^2.0.0",

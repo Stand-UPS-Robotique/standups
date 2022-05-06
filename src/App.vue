@@ -1,20 +1,14 @@
 <template>
-  <div class="grid h-full w-full place-items-center bg-gray-100">
+  <div class="custom-bg grid h-full w-full place-items-center">
     <div class="px-3">
-      <h1 class="mb-8 text-center font-mono text-5xl uppercase">
+      <h1
+        class="mb-8 text-center font-mono text-5xl uppercase backdrop-contrast-100"
+      >
         Stand'UPS Robotique
       </h1>
 
       <div class="flex flex-col gap-3">
-        <a
-          v-for="social in socials"
-          :href="social.url"
-          target="_blank"
-          class="flex items-center gap-3 rounded-md bg-white p-6 shadow-md"
-        >
-          <img :src="icon(social.icon)" class="w-6" />
-          <p>{{ social.name }}</p>
-        </a>
+        <Social v-for="s in socials" :brand="s.icon" :url="s.url" />
       </div>
     </div>
   </div>
@@ -25,9 +19,7 @@
 <script setup lang="ts">
 import Footer from "@/components/footer.vue";
 import socials from "@/data/socials.json";
-
-const icon = (brand: string) =>
-  `https://unpkg.com/simple-icons@6.20.0/icons/${brand}.svg`;
+import Social from "./components/social.vue";
 </script>
 
 <style>
@@ -35,5 +27,16 @@ html,
 body,
 #app {
   @apply m-0 h-full;
+}
+
+.custom-bg {
+  @apply relative bg-white bg-opacity-70;
+}
+
+.custom-bg::before {
+  @apply absolute inset-0 -z-10;
+  content: "";
+  background-image: url("@/assets/background.jpg");
+  background-size: cover;
 }
 </style>
