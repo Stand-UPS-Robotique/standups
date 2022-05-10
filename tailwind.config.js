@@ -3,8 +3,12 @@ module.exports = {
 
   theme: {
     extend: {
+      colors: {
+        primary: "var(--color-primary)",
+      },
       fontFamily: {
         mono: ["Nova Mono", "monospace"],
+        sans: ["Inter", "sans-serif"],
       },
     },
   },

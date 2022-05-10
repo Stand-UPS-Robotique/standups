@@ -1,9 +1,11 @@
 <template>
-  <a :href="url" target="_blank" class="social" :style="colorStyle">
-    <svg class="h-6 w-6">
-      <path :d="svg"></path>
-    </svg>
-    <p>{{ name }}</p>
+  <a
+    :href="url"
+    target="_blank"
+    class="social"
+    :style="colorStyle"
+    v-html="svg"
+  >
   </a>
 </template>
 
@@ -11,17 +13,17 @@
 import simpleIcons from "simple-icons";
 
 const props = defineProps<{ url: string; brand: string }>();
-const { path: svg, title: name, hex } = simpleIcons.Get(props.brand);
+const { svg, hex } = simpleIcons.Get(props.brand);
 const colorStyle = `--color: #${hex}`;
 </script>
 
 <style scoped>
 .social {
-  @apply flex items-center gap-3 rounded-md bg-white p-6 shadow-md transition-all;
+  @apply grid aspect-square w-6 place-content-center opacity-60 transition-all lg:w-10;
 }
 
 .social:hover {
-  @apply shadow-lg;
+  @apply opacity-100;
   fill: var(--color);
   color: var(--color);
 }
