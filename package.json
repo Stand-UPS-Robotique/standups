@@ -1,12 +1,11 @@
 {
-  "name": "{{TODO: set project name}}",
+  "name": "standups",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "deploy": "npm run build && scp -r dist/ {{TODO: Add destination}}"
+    "preview": "vite preview"
   },
   "dependencies": {
     "feather-icons": "^4.28.0",
